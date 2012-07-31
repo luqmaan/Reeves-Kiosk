@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+    <html>
+    <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>PhoneGap</title>
+    <link rel="stylesheet" href="master.css" type="text/css" media="screen"
+        title="no title" charset="utf-8">
+	<script type="text/javascript" charset="utf-8" src="js/libs/cordova-1.8.1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="main.js"></script>
+    <script src="http://debug.phonegap.com/target/target-script-min.js#92039091239j01109230219"></script>
+
+    <script type="text/javascript" charset="utf-8">
+
+        // Wait for PhoneGap to load
+        //
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // PhoneGap is ready
+        //
+        function onDeviceReady() {
+        	console.log("onDeviceReady")
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+        }
+
+        function gotFS(fileSystem) {
+        	console.log("gotFS")
+            console.log(fileSystem.name);
+            console.log(fileSystem.root.name);
+
+            
+
+            // create a directory reader
+            var directoryReader = entry.createReader();
+
+            console.log("getting dataDir");
+            // Get the data directory, creating it if it doesn't exist.
+            dataDir = fileSystem.root.getDirectory("reeves", {create: true, exclusive: true});
+
+           // console.log("create lockfile");
+            // Create the lock file, if and only if it doesn't exist.
+           // lockFile = dataDir.getFile("lockfile.txt", {create: true, exclusive: true});
+            console.log("create test.txt");
+
+			dataDir.getFile("test.txt", {create: true, exclusive: true}, gotFileEntry, fail);
+        }
+
+        function gotFileEntry(fileEntry) {
+        	console.log("gotFileEntry")
+            fileEntry.createWriter(gotFileWriter, fail);
+        }
+
+        function gotFileWriter(writer) {
+        	console.log("gotFileWriter")
+            writer.onwrite = function(evt) {
+                console.log("write success");
+            };
+            writer.write("some sample text");
+            // contents of file now 'some sample text'
+            writer.truncate(11);
+            // contents of file now 'some sample'
+            writer.seek(4);
+            // contents of file still 'some sample' but file pointer is after the 'e' in 'some'
+            writer.write(" different text");
+            // contents of file now 'some different text'
+        }
+
+        function fail(error) {
+        	console.log("fail")
+            console.log(error.code);
+        }
+
+        console.log("asdf")
+
+        </script>
+
+    </head>
+    <body>
+    <h1>Example</h1>
+    <p id="content">Write File</p>
+
+    </body>
+    </html>
