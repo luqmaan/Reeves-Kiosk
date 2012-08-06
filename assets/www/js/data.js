@@ -7,7 +7,7 @@
             
 
             // open the database
-            data.db = html5sql.openDatabase("com.reeves.kiosk.db", "Reeves DB", 3 * 1024 * 1024);
+            data.db = html5sql.openDatabase("com.reeves.kiosk.db", "Reeves DB", 40 * 1024 * 1024);
 
 
             html5sql.process("SELECT * FROM versions", function (tx, results) {
