@@ -1,6 +1,5 @@
-/assets/www/server 
-assets/www/server
 .DS_Store
 sublime*.json
 sftp*.json
 *.mp4
+pw.php
