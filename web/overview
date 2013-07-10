@@ -1,0 +1,77 @@
+
+curl -i -H "Accept: application/json" -X POST -d "table=specials" http://kiosk.reevesimportmotorcars.com/server/table_sql.php  
+
+curl -i -H "Accept: application/json" -X POST -d "callback=jQuery17209008157372009009_1341453024540&0[id]=1&0[first]=john&0[last]=doe&0[email]=jdeo@gmail.com&0[phone]=3217507895&0[make]=Volkswagen&0[model]=Carmobile&0[contact_time]=2012-02-10 01:00:00&0[page]=test&1[id]=2&1[first]=a&1[last]=a&1[email]=a&1[phone]=a&1[make]=audi&1[model]=a&1[contact_time]=2012-07-04 21:50:34&1[page]=contact" http://kiosk.reevesimportmotorcars.com/server/receiveContact.php
+
+curl --data "callback=jQuery17206552207276690751_1341515760131&id=2&table_name=specials&version=1" http://kiosk.reevesimportmotorcars.com/server/tableStatus.php
+
+
+INSERT INTO `kioskphonegap`.`models` (`id`, `make`, `make_name`, `model`, `image`, `thumb`, `features`, `price`, `mpg_city`, `mpg_hwy`, `updated_on`, `created_on`, `leorder`) VALUES (NULL, 'maserati', 'Maserati', 'Test', 'imprezabig.jpg', 'legacy.jpg', '- Just a test<br />- Just a test', '210000', '10', '20', CURRENT_TIMESTAMP, '0000-00-00 00:00:00', NULL);
+
+
+INSERT INTO  `kioskphonegap`.`specials` (
+`id` ,
+`make` ,
+`thumb` ,
+`headline` ,
+`description` ,
+`leorder`
+)
+VALUES (
+NULL ,  'bmw',  '5.jpg',  'BMW Special of the week',  'Description of the special', NULL
+);
+
+
+sql operations
+====================
+- rename drop table
+	IF EXISTS specials DROP TABLE specials;
+	DROP TABLE IF EXISTS specials;
+- remove options
+	ENGINE=MyISAM DEFAULT CHARSET=latin1;
+- convert each whitespace item into an array
+
+
+ --allow-file-access-from-files
+
+
+namespace.js
+reeves : {
+	
+	models: {
+		bmw: {
+			id: {}
+		}
+	}
+	makes: {}
+
+	versions: {
+		models = 1.1
+		makes = 1.1
+	}
+
+
+}
+
+setInterval sync, 30 mins
+
+sync:
+	if online
+		check versions file
+			if online and versions different
+				download new versions file
+				save it to filesystem
+		check contacts
+			if !empty
+
+
+
+server:
+	respond with versions table
+		{
+			models : 1.1, 
+			makes: 1.1
+		}
+	respond with new json file
+		mysql to json the db
+

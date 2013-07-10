@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000 0 top url('../images/bodybg.png') repeat-x;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+}
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);     
+}
+*:focus {
+    outline:none !important;
+}
+.tap {
+    padding: 5px;
+}
+.tap:hover, .tap:active {
+    background-color: #FFD32E;
+    -webkit-box-shadow: 0px 0px 20px #EBB000;
+    border-radius: 11px;
+    opacity: 0.9;
+}
+#footer .tap:hover, #footer .tap:active {
+     background-color: #242424;
+}
+#container {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1200px;
+    height: 670px;
+}
+/*
+ * Logo Bar
+ */
+#logoBar {
+    height: 150px;
+    background: #fff;
+    text-align: center;
+}
+
+#logoBar .make {
+    display: inline-block;
+    margin: 30px 25px 0;
+    vertical-align: middle;
+}
+
+#logoBar .currentLogoMarker {
+    position: absolute;
+    top: 136px;
+    z-index: 1;
+    float: left;
+    margin: 0;
+    margin-left: -125px;
+    vertical-align: bottom;
+}
+/*
+ * Main
+ */
+#main {
+    position: relative;
+    padding: 30px 30px 0 30px;
+    height: 620px;
+    background: #000 url('../images/main_bg.png') top repeat-x;
+    color: #838383;
+    text-align: center;
+}
+/*
+ * Model Grid
+ */
+#backArrow, #forwardArrow {
+    float: left;
+    display: inline-block;
+    margin: 45px 30px 0;
+    width: 90px;
+}
+
+.galleryGrid {
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 800px;
+    height: 500px;
+}
+
+.galleryGrid .model {
+    float: left;
+    display: inline-block;
+    margin: 5px 20px;
+}
+
+.galleryGrid img, .galleryGrid .name, .galleryGrid .price {
+    float: left;
+    clear: both;
+    display: inline-block;
+}
+
+.galleryGrid .name, .galleryGrid .price {
+    width: 100%;
+}
+
+.galleryGrid img {
+    margin-bottom: 10px;
+}
+/*
+ * Model Page For One Car
+ */
+.detailPage {
+    margin-left: 20px;
+    width: 1100px;
+    height: 440px;
+    background: #fff;
+    color: #001;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1.2em;
+}
+.detailPage #close {
+    margin-right: -20px;
+margin-top: -20px;
+}
+.detailPage img #car {
+    float: left;
+    overflow: hidden;
+    width: 550px;
+    height: 440px;
+}
+
+.detailPage #details {
+    float: left;
+    padding: 15px 30px;
+    width: 490px;
+    height: 410px;
+}
+
+.detailPage #mpg, .detailPage .features {
+    clear: both;
+    display: block;
+}
+
+.detailPage #mpg {
+    padding-left: 55px;
+}
+
+.detailPage #mpg .info {
+    margin: 25px 20px;
+}
+
+.detailPage img {
+    margin-bottom: 15px;
+}
+
+.detailPage .info, .detailPage img {
+    float: left;
+    display: block;
+}
+
+.detailPage h2 {
+    margin-top: 10px;
+}
+/*
+ * Sepcials
+ */
+#specials {
+    float: left;
+    display: inline-block;
+    width: 1140px;
+    height: 500px;
+    overflow: auto;
+    white-space: nowrap;
+}
+#specials .item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    text-align: left;
+    width: 350px;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: middle;
+    min-height: 430px;
+    max-height: 430px;
+}
+#specials .headline {
+    display: block;
+    margin-bottom: 10px;
+    color: #413F3A;
+    font-size: 18px;
+    float: left;
+    clear: both;
+}
+#specials .description {
+    font-weight: normal;
+    font-size: 14px;
+    float: left;
+    clear: ;
+    line-height: 1.3em;
+}
+#specials img {
+    float: left;
+    margin-right: 20px;
+}
+/*
+ * Primary navigation, displayed when click on a logo
+ */
+.nav_main {
+    margin-top: 15px;
+    display:block;
+}
+
+.nav_main img {
+    margin: 10px 0;
+    display: block;
+    float: left;
+    clear: both;
+}
+
+/*
+ * Secondary navigation, displayed within a specific make's pages
+ */
+#nav_secondary img {
+    margin: 10px 20px 15px;
+}
+/*
+ * Footer
+ */
+#footer {
+    position: absolute;
+    top: 740px;
+    clear: both;
+    margin: 0px -30px;
+    width: 1200px;
+    background: #000;
+    font-size: 25px;
+}
+#footer span {
+    position: relative;
+    float:left;
+    display: inline-block;
+    margin: 2px 0px 2px 7px;
+}
+#footer a {
+    color: #FFCC32;
+    text-decoration: none;
+}
+#footer div {
+    float: left;
+}
+#footer #back {
+    margin-left:90px;
+    width: 120px;
+}
+#footer #forward {
+    width: 130px;
+}
+
+#footer .arrow {
+    float: left;
+    display: inline-block;
+    width: 30px;
+}
+#footer #reevesLogo {
+    margin-top: -20px;
+    margin-left:340px;
+    width: 125px;
+}
+#footer #contactButton {
+    float: left;
+    margin-left: 335px;
+}
+/*
+ * Contact
+ */
+#contact {
+    display: inline-block;
+    margin: 10px auto 0;
+    padding: 30px;
+    background: #fff;
+    color: #838383;
+    text-align: left;
+    letter-spacing: 2px;
+}
+#contact.test {
+    margin-top: 10px;
+}
+#contact h2 {
+    margin: 0 0 10px 0;
+    font-weight: normal;
+}
+#close {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    float: right;
+    margin-right: -55px;
+    margin-top: -55px;
+    padding: 0px;
+}
+#close:hover, #close:active, #close:focus {
+    border-radius: 30px;
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    background: rgba(0,0,0,.5);
+}
+#overlay .contact {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: 4;
+    display: block;
+    margin: 0;
+    margin-left: 210px;
+    width: 45em;
+    background: #fff;
+}
+#contactClose {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    z-index: 5;
+    float: right;
+    display: inline;
+}
+label {
+    float: left;
+    clear: left;
+    display: block;
+    padding: 18px 15px 0 0;
+    width: 9em;
+    color: #000;
+    text-align: right;
+    font-weight: normal;
+    font-size: 25px;
+}
+input, select {
+    float: left;
+    clear: none;
+    margin: 20px auto;
+    margin: 10px 0 0 2px;
+    padding: 3px 5px;
+    border: 1px solid #000;
+    color: #777;
+    font-size: 15px;
+    font-size: 23px;
+}
+select {
+    padding-left:10px;
+}
+input#submit {
+    float: left;
+    clear: both;
+    margin-left: 8em;
+    border: none;
+    background: white;
+    font-size: 30px;
+}
+input:focus {
+    color: #000;
+}
+.unhappyMessage {
+    display: none;
+}
+.unhappy {
+    background: #F9C6C5;
+}
+.happy {
+    background: #C8E5B1;
+}
+#back {
+
+}
